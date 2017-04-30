@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00f3f3</color>
+    <color name="colorPrimaryDark">#03dddd</color>
+    <color name="colorPrimaryLight">#C4C9E8</color>
+    <color name="colorAccent">#880E4F</color>
+
+    <!-- overwrite the selected colors because the primary color is to dark -->
+    <color name="material_drawer_selected_text">#536EEA</color>
+    <color name="material_drawer_dark_selected_text">#536EEA</color>
+
+    <color name="first_slide_background">#00f3f3</color>
+    <color name="first_slide_buttons">#00a4a4</color>
+
+    <color name="second_slide_background">#ffc341</color>
+    <color name="second_slide_buttons">#d29000</color>
+
+    <color name="third_slide_background">#54a127</color>
+    <color name="third_slide_buttons">#2f7a03</color>
+
+    <color name="fourth_slide_background">#ffffff</color>
+    <color name="fourth_slide_buttons">#c7c4c4</color>
+
+    <color name="fifth_slide_background">#cb5151</color>
+    <color name="fifth_slide_buttons">#9c0303</color>
+
+    <color name="sixth_slide_background">#5ec8f4</color>
+    <color name="sixth_slide_buttons">#058dc6</color>
+
+    <color name="custom_slide_background">#1a1a1a </color>
+    <color name="custom_slide_buttons">#4d4d4d </color>
+
+    <color name="bluePrimaryDark">#048BFE</color>
+    <color name="bluePrimary">#2199FF</color>
+    <color name="bluePrimaryLight">#BADFFF</color>
+
+    <color name="redPrimaryDark">#DD3131</color>
+    <color name="redPrimary">#FF5E5E</color>
+    <color name="redPrimaryLight">#FFC9C9</color>
+
+    <color name="bgBackSideColor">#f4f0ff</color>
+    <color name="bgTitleLeft">#594691</color>
+    <color name="bgTitleRight">#ffffff</color>
+    <color name="bgContentTop">#594691</color>
+    <color name="bgContent">#ffffff</color>
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="titleBadgeTitle">#adafb1</color>
+    <color name="titleBadgeText">#adafb1</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="btnRequest">#ffbf12</color>
+
+    <color name="finestWhite">#ffffff</color>
+    <color name="finestBlack">#000000</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!--Splash Screen-->
+    <item name="splash_background" type="color">@color/colorPrimary</item>
+
+</resources>

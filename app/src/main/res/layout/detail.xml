@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/txt_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/person"
+        app:mtf_openKeyboardOnFocus="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp">
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nick Name"
+        android:textColor="@color/finestBlack"/>
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/txt_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/id"
+        app:mtf_openKeyboardOnFocus="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt_name"
+        >
+        <EditText
+            android:id="@+id/uni_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="University ID"
+            android:textColor="@color/finestBlack"/>
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#7ab800"
+        fancy:fb_focusColor="#9bd823"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="DONE!!!"
+        fancy:fb_textColor="@color/finestWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt_id"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
