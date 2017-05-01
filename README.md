@@ -18,4 +18,7 @@ Campus App For Chittagong University Of Engineering And Technology.
  
 ## Getting Help
 
-To report a specific problem or feature request, please mail me at kazimifta13@gmail.com
+To report a specific problem or feature request, please mail me at kmifta.odesk@gmail.com
+
+
+

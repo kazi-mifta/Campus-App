@@ -35,7 +35,7 @@
 
                 android:layout_marginBottom="2dp"
                 android:layout_marginStart="10dp"
-                android:text="Mohammad Alvee"
+                android:text="Somebody New"
                 android:textColor="@color/mainTextColor"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -67,7 +67,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CSE-1504064"
+                    android:text="CSE-1500000"
                     android:textColor="@color/mainTextColor"
                     android:textSize="18sp" />
 
@@ -101,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="Mail:alvee15@gmail.com&#xA;Mobile:01617999709&#xA;FB:Mohammad Alvee"
+                    android:text="Mail: smnew@gmail.com&#xA;Mobile: 01600000000&#xA;FB: Somebody New"
                     android:textColor="@color/mainTextColor"
                     android:textSize="18sp" />
 

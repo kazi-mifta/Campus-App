@@ -118,7 +118,7 @@ public class  Item {
      */
     public static ArrayList<Item> getTestingList() {
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("GET HELP", "Mohammad Alvee","App Development,Web Development", "COURSE:", "CSE-141,CSE-142,CSE-143,CSE-144"));
+        items.add(new Item("CSE", "Somebody New","App Development,Web Development,Competitive Programming,Robotics", "COURSE:", "CSE-141,CSE-142,CSE-143,CSE-144"));
         //Add more Here
         return items;
 
