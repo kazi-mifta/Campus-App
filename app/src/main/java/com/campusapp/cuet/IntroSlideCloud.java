@@ -10,12 +10,12 @@ import agency.tango.materialintro.R;
 import agency.tango.materialintroscreen.SlideFragment;
 
 //See The IntroSlideCalendar Section To Know More How This Class Works
-public class IntroSlideNotification extends SlideFragment {
+public class IntroSlideCloud extends SlideFragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.notification, container, false);
+        final View view = inflater.inflate(R.layout.cloud, container, false);
 
         return view;
     }

@@ -42,11 +42,11 @@ public class IntroActivity extends MaterialIntroActivity {
                         .build());*/
         addSlide(new IntroSlideWelcome());
 
-        addSlide(new IntroSlideNotification());
-
         addSlide(new IntroSlideUpdate());
 
         addSlide(new IntroSlideCalendar());
+
+        addSlide(new IntroSlideCloud());
 
         addSlide(new IntroSlideCamera());
 

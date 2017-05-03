@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="330dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/notification"
+        android:src="@drawable/cloud"
         />
 
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title"
-        android:text="Notifications"
+        android:text="Cloud Storage"
         android:textSize="28sp"
         android:layout_below="@id/gifImageView"
         android:textColor="@color/md_white_1000"
@@ -32,7 +32,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:id="@+id/description"
-        android:text="Get Instant Push Notifications"
+        android:text="For Easy File Sharing"
         android:textSize="18sp"
         android:layout_below="@id/title"
         android:textColor="@color/md_white_1000"

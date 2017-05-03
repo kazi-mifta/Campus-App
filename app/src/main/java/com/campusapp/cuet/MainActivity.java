@@ -103,13 +103,14 @@ public class  MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName("Campus").withIcon(GoogleMaterial.Icon.gmd_landscape).withIconColor(Color.DKGRAY).withIdentifier(1),
                         new PrimaryDrawerItem().withName("Updates").withIcon(GoogleMaterial.Icon.gmd_dashboard).withIconColor(Color.DKGRAY).withIdentifier(2).withSelectable(false),
                         new PrimaryDrawerItem().withName("Calendar").withIcon(FontAwesome.Icon.faw_calendar_check_o).withIconColor(Color.DKGRAY).withIdentifier(3).withSelectable(false),
-                        new PrimaryDrawerItem().withName("Photography").withIcon(GoogleMaterial.Icon.gmd_burst_mode).withIconColor(Color.DKGRAY).withIdentifier(4).withSelectable(false),
+                        new PrimaryDrawerItem().withName("Cloud").withIcon(GoogleMaterial.Icon.gmd_cloud_download).withIconColor(Color.DKGRAY).withIdentifier(4).withSelectable(false),
+                        new PrimaryDrawerItem().withName("Photography").withIcon(GoogleMaterial.Icon.gmd_burst_mode).withIconColor(Color.DKGRAY).withIdentifier(5).withSelectable(false),
                         new SectionDrawerItem().withName("Help Section"),
-                        new SecondaryDrawerItem().withName("Geeks").withIcon(FontAwesome.Icon.faw_pied_piper).withIconColor(Color.DKGRAY).withIdentifier(5).withSelectable(false),
-                        new SecondaryDrawerItem().withName("Map").withIcon(FontAwesome.Icon.faw_map).withIconColor(Color.DKGRAY).withIdentifier(6).withSelectable(false),
+                        new SecondaryDrawerItem().withName("Geeks").withIcon(FontAwesome.Icon.faw_pied_piper).withIconColor(Color.DKGRAY).withIdentifier(6).withSelectable(false),
+                        new SecondaryDrawerItem().withName("Map").withIcon(FontAwesome.Icon.faw_map).withIconColor(Color.DKGRAY).withIdentifier(7).withSelectable(false),
                         new SectionDrawerItem().withName("Others"),
-                        new SecondaryDrawerItem().withName("Contributors").withIcon(GoogleMaterial.Icon.gmd_assignment_ind).withIconColor(Color.DKGRAY).withIdentifier(7),
-                        new SecondaryDrawerItem().withName("About").withIcon(GoogleMaterial.Icon.gmd_format_color_fill).withIconColor(Color.DKGRAY).withIdentifier(8)
+                        new SecondaryDrawerItem().withName("Contributors").withIcon(GoogleMaterial.Icon.gmd_assignment_ind).withIconColor(Color.DKGRAY).withIdentifier(8),
+                        new SecondaryDrawerItem().withName("About").withIcon(GoogleMaterial.Icon.gmd_format_color_fill).withIconColor(Color.DKGRAY).withIdentifier(9)
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -125,12 +126,15 @@ public class  MainActivity extends AppCompatActivity {
                                 Intent intent = new Intent(MainActivity.this, CalendarWebView.class);
                                 startActivity(intent);
                             }else if (drawerItem.getIdentifier() == 4) {
+                                Intent intent = new Intent(MainActivity.this, CloudWebView.class);
+                                startActivity(intent);
+                            }else if (drawerItem.getIdentifier() == 5) {
                                 Intent intent = new Intent(MainActivity.this, PhotographyWebView.class);
                                 startActivity(intent);
-                            } else if (drawerItem.getIdentifier() == 5) {
+                            } else if (drawerItem.getIdentifier() == 6) {
                                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
                                 startActivity(intent);
-                            }else if (drawerItem.getIdentifier() == 6) {
+                            }else if (drawerItem.getIdentifier() == 7) {
                                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
                                 startActivity(intent);
                             }
