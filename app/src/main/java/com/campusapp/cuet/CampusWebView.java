@@ -18,7 +18,7 @@ public class CampusWebView extends Activity implements AdvancedWebView.Listener 
 
     private AdvancedWebView mWebView;
     GifImageView mCube;
-
+    private Toast mToast;
 
 
     @Override
@@ -79,8 +79,11 @@ public class CampusWebView extends Activity implements AdvancedWebView.Listener 
     public void onPageStarted(String url, Bitmap favicon) {
 
         mCube.setVisibility(View.VISIBLE);
+        if(mToast!=null){
+            mToast.cancel();
+        }
 
-        Toast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
 
     }
 

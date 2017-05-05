@@ -52,7 +52,7 @@ public class IntroActivity extends MaterialIntroActivity {
 
         addSlide(new IntroSlideHelp());
 
-        addSlide(new IntroSlideDetail());
+       // addSlide(new IntroSlideDetail());
 
     }
 

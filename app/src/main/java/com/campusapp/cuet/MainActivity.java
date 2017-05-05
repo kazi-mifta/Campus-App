@@ -63,8 +63,8 @@ public class  MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Getting Name And ID For The Header Section
-        Namemain= PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("Name", "Name");
-        IDmain=PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("ID", "ID");
+       // Namemain= PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("Name", "Name");
+        //IDmain=PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("ID", "ID");
 
 
         // Handle Toolbar
@@ -80,7 +80,7 @@ public class  MainActivity extends AppCompatActivity {
 
         // Create a few sample profile
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
-        final IProfile profile = new ProfileDrawerItem().withName(Namemain).withEmail(IDmain).withIcon(R.drawable.profile3);
+        final IProfile profile = new ProfileDrawerItem().withIcon(R.drawable.profile3);
         // Create the AccountHeader Section
         headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -110,7 +110,7 @@ public class  MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem().withName("Map").withIcon(FontAwesome.Icon.faw_map).withIconColor(Color.DKGRAY).withIdentifier(7).withSelectable(false),
                         new SectionDrawerItem().withName("Others"),
                         new SecondaryDrawerItem().withName("Contributors").withIcon(GoogleMaterial.Icon.gmd_assignment_ind).withIconColor(Color.DKGRAY).withIdentifier(8),
-                        new SecondaryDrawerItem().withName("About").withIcon(GoogleMaterial.Icon.gmd_format_color_fill).withIconColor(Color.DKGRAY).withIdentifier(9)
+                        new SecondaryDrawerItem().withName("About").withIcon(GoogleMaterial.Icon.gmd_description).withIconColor(Color.DKGRAY).withIdentifier(9)
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override

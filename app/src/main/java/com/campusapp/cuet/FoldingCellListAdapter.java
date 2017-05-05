@@ -1,7 +1,6 @@
 package com.campusapp.cuet;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,13 +43,17 @@ public class FoldingCellListAdapter extends ArrayAdapter<Item> {
             LayoutInflater vi = LayoutInflater.from(getContext());
             cell = (FoldingCell) vi.inflate(R.layout.cell, parent, false);
             // binding view parts to view holder
-            viewHolder.price = (TextView) cell.findViewById(R.id.title_price);
+            viewHolder.department = (TextView) cell.findViewById(R.id.department);
             viewHolder.time = (TextView) cell.findViewById(R.id.title_time_label);
             viewHolder.date = (TextView) cell.findViewById(R.id.title_date_label);
-            viewHolder.fromAddress = (TextView) cell.findViewById(R.id.title_from_address);
-            //To add Things Add Here
+            viewHolder.shortName = (TextView) cell.findViewById(R.id.short_name);
+            viewHolder.fullName=(TextView) cell.findViewById(R.id.full_name);
+            viewHolder.universityId=(TextView) cell.findViewById(R.id.university_id);
+            viewHolder.contactInfo=(TextView) cell.findViewById(R.id.contact_info);
 
-            viewHolder.requestsCount = (TextView) cell.findViewById(R.id.title_requests_count);
+            //To add Things Inside list Add Here
+
+            viewHolder.interests = (TextView) cell.findViewById(R.id.interests);
             cell.setTag(viewHolder);
         } else {
             // for existing cell set valid valid state(without animation)
@@ -63,13 +66,17 @@ public class FoldingCellListAdapter extends ArrayAdapter<Item> {
         }
 
         // bind data from selected element to view through view holder
-        viewHolder.price.setText(item.getPrice());
+        viewHolder.department.setText(item.getDepartment());
         viewHolder.time.setText(item.getTime());
         viewHolder.date.setText(item.getDate());
-        //To add Things Add Here
+        //To add Things Inside List Add Here
 
-        viewHolder.fromAddress.setText(item.getFromAddress());
-        viewHolder.requestsCount.setText(item.getRequestsCount());
+        viewHolder.shortName.setText(item.getShortName());
+        viewHolder.interests.setText(item.getInterests());
+        viewHolder.fullName.setText(item.getFullName());
+        viewHolder.universityId.setText(item.getUniversityId());
+        viewHolder.contactInfo.setText(item.getContactInfo());
+
         viewHolder.contentRequestBtn = (TextView) cell.findViewById(R.id.content_request_btn);
 
 
@@ -111,12 +118,16 @@ public class FoldingCellListAdapter extends ArrayAdapter<Item> {
 
     // View lookup cache
     private static class ViewHolder {
-        TextView price;
+        TextView department;
         TextView contentRequestBtn;
-        TextView fromAddress;
-        //To add Things Add Here
+        TextView shortName;
+        //To add Things Inside List Add Here
 
-        TextView requestsCount;
+        TextView interests;
+        TextView fullName;
+        TextView universityId;
+        TextView contactInfo;
+
         TextView date;
         TextView time;
     }

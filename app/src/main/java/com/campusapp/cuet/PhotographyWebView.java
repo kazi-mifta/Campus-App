@@ -17,7 +17,7 @@ public class PhotographyWebView extends Activity implements AdvancedWebView.List
 
     private AdvancedWebView mWebView;
     GifImageView mCube;
-
+    private Toast mToast;
 
 
 
@@ -78,7 +78,11 @@ public class PhotographyWebView extends Activity implements AdvancedWebView.List
 
         mCube.setVisibility(View.VISIBLE);
 
-        Toast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        if(mToast!=null){
+            mToast.cancel();
+        }
+
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
 
     }
 

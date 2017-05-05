@@ -9,55 +9,89 @@ import java.util.ArrayList;
  */
 public class  Item {
 
-    private String price;
+    private String department;
     //Add Here
-    private String fromAddress;
-    private String requestsCount;
+    private String shortName;
+    private String interests;
+    private String fullName;
+    private String universityId;
+    private String contactInfo;
+
+
+    //Unused
     private String date;
     private String time;
-
+    //Bitton
     private View.OnClickListener requestBtnClickListener;
 
     public Item() {
     }
 
     //Add in The Funtions Parameter
-    public Item(String price,String fromAddress, String requestsCount, String date, String time) {
-        this.price = price;
+    public Item(String department, String shortName, String interests, String date, String time,String fullName,String universityId,String contactInfo) {
+        this.department = department;
 
-        this.fromAddress = fromAddress;
+        this.shortName = shortName;
         //Add Here
-        this.requestsCount = requestsCount;
+        this.interests = interests;
+        this.fullName=fullName;
+        this.universityId=universityId;
+        this.contactInfo=contactInfo;
+
+
         this.date = date;
         this.time = time;
     }
 
-    public String getPrice() {
-        return price;
+    //For TitleView
+    public String getDepartment() {
+        return department;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
 
-    public String getFromAddress() {
-        return fromAddress;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setFromAddress(String fromAddress) {
-        this.fromAddress = fromAddress;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
-    //Add Here
+    //Add Here to add things inside List
 
-    public String getRequestsCount() {
-        return requestsCount;
+    public String getInterests() {
+        return interests;
     }
 
-    public void setRequestsCount(String requestsCount) {
-        this.requestsCount = requestsCount;
+    public void setInterests(String interests) {
+        this.interests = interests;
     }
+
+
+    //For ContentView
+    public String getFullName(){return fullName;}
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getUniversityId(){return universityId;}
+
+    public void setUniversityId(String universityId) {
+        this.universityId = universityId;
+    }
+
+
+    public String getContactInfo(){return contactInfo;}
+
+    public void setContactInfo(String contactInfo){
+        this.contactInfo=contactInfo;
+    }
+
 
     public String getDate() {
         return date;
@@ -90,12 +124,18 @@ public class  Item {
 
         Item item = (Item) o;
 
-        if (requestsCount != item.requestsCount) return false;
-        if (price != null ? !price.equals(item.price) : item.price != null) return false;
+        if (interests != item.interests) return false;
+        if (department != null ? !department.equals(item.department) : item.department != null) return false;
 
-        if (fromAddress != null ? !fromAddress.equals(item.fromAddress) : item.fromAddress != null)
+        if (shortName != null ? !shortName.equals(item.shortName) : item.shortName != null)
             return false;
-        //Add Here
+        if (fullName != null ? !fullName.equals(item.fullName) : item.fullName != null) return false;
+
+        if (universityId != null ? !universityId.equals(item.universityId) : item.universityId != null) return false;
+
+        if (contactInfo != null ? !contactInfo.equals(item.contactInfo) : item.contactInfo != null) return false;
+
+        //Add Here to add inside list
         if (date != null ? !date.equals(item.date) : item.date != null) return false;
         return !(time != null ? !time.equals(item.time) : item.time != null);
 
@@ -103,11 +143,16 @@ public class  Item {
 
     @Override
     public int hashCode() {
-        int result = price != null ? price.hashCode() : 0;
+        int result = department != null ? department.hashCode() : 0;
 
-        //Add Here
-        result = 31 * result + (fromAddress != null ? fromAddress.hashCode() : 0);
-        result = 31 * result + (requestsCount!= null ? requestsCount.hashCode() : 0);
+        //Add Here to Add Inside List
+        result = 31 * result + (shortName != null ? shortName.hashCode() : 0);
+        result = 31 * result + (interests != null ? interests.hashCode() : 0);
+        result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
+        result = 31 * result + (universityId != null ? universityId.hashCode() : 0);
+        result = 31 * result + (contactInfo != null ? contactInfo.hashCode() : 0);
+
+
         result = 31 * result + (date != null ? date.hashCode() : 0);
         result = 31 * result + (time != null ? time.hashCode() : 0);
         return result;
@@ -118,7 +163,10 @@ public class  Item {
      */
     public static ArrayList<Item> getTestingList() {
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("CSE", "Somebody New","App Development,Web Development,Competitive Programming,Robotics", "COURSE:", "CSE-141,CSE-142,CSE-143,CSE-144"));
+        items.add(new Item("CSE", "Deep Blue","Super Computer,Chess Grandmaster", "", "","Deep Blue","CSE-15040000","Mail: deepblue@gmail.com\nMobile: 01600000000\nFB: Deep Blue"));
+        items.add(new Item("EEE", "Watson","Cognitive Thinking,Artificial Intelligence", "", "","IBM Watson","CSE-1504999","Mail: watson@gmail.com\nMobile: 01600000000\nFB: Watson"));
+        items.add(new Item("ME", "Jarvis","Iron Man Helper, Digital Assistannt", "", "","Jarvis","CSE-1504888","Mail: jarvis@gmail.com\nMobile: 01600000000\nFB: Jarvis"));
+
         //Add more Here
         return items;
 

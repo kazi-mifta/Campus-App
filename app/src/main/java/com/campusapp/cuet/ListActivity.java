@@ -31,10 +31,10 @@ public class ListActivity extends AppCompatActivity {
         final ArrayList<Item> items = Item.getTestingList();
 
         // add custom btn handler to first list item
-        items.get(0).setRequestBtnClickListener(new View.OnClickListener() {
+        items.get(0).setRequestBtnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "CUSTOM HANDLER FOR FIRST BUTTON", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "The Email Will Work Later When We Have The Original Geek List", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -20,7 +20,7 @@ public class CalendarWebView extends Activity implements AdvancedWebView.Listene
 
     private AdvancedWebView mWebView;
     GifImageView mCube;
-
+    private Toast mToast;
 
 
     @Override
@@ -34,6 +34,7 @@ public class CalendarWebView extends Activity implements AdvancedWebView.Listene
         mWebView.setListener(this, this);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl("https://teamup.com/ks9mq2dgkqbkzk2gbi");//The Website Where The Calendar Resides.
+
 
         // ...
     }
@@ -85,8 +86,11 @@ public class CalendarWebView extends Activity implements AdvancedWebView.Listene
     public void onPageStarted(String url, Bitmap favicon) {
 
         mCube.setVisibility(View.VISIBLE);
+        if(mToast!=null){
+            mToast.cancel();
+        }
 
-        Toast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
 
     }
 

@@ -14,15 +14,11 @@ import agency.tango.materialintro.R;
 import im.delight.android.webview.AdvancedWebView;
 import pl.droidsonroids.gif.GifImageView;
 
-/**
- * Created by Mifta on 5/2/2017.
- */
-
 public class CloudWebView  extends Activity implements AdvancedWebView.Listener {
 
     private AdvancedWebView mWebView;
     GifImageView mCube;
-
+    private Toast mToast;
 
 
     @Override
@@ -90,8 +86,11 @@ public class CloudWebView  extends Activity implements AdvancedWebView.Listener 
     public void onPageStarted(String url, Bitmap favicon) {
 
         mCube.setVisibility(View.VISIBLE);
+        if(mToast!=null){
+            mToast.cancel();
+        }
 
-        Toast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
 
     }
 

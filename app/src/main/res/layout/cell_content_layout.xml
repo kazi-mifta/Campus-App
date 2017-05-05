@@ -29,13 +29,13 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/content_name_view"
+                android:id="@+id/full_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
                 android:layout_marginBottom="2dp"
                 android:layout_marginStart="10dp"
-                android:text="Somebody New"
+                android:text=""
                 android:textColor="@color/mainTextColor"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -63,11 +63,11 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/content_from_address_2"
+                    android:id="@+id/university_id"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CSE-1500000"
+                    android:text=""
                     android:textColor="@color/mainTextColor"
                     android:textSize="18sp" />
 
@@ -96,12 +96,12 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/content_delivery_date"
+                    android:id="@+id/contact_info"
                     android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="Mail: smnew@gmail.com&#xA;Mobile: 01600000000&#xA;FB: Somebody New"
+                    android:text=""
                     android:textColor="@color/mainTextColor"
                     android:textSize="18sp" />
 
