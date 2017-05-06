@@ -164,8 +164,8 @@ public class  Item {
     public static ArrayList<Item> getTestingList() {
         ArrayList<Item> items = new ArrayList<>();
         items.add(new Item("CSE", "Deep Blue","Super Computer,Chess Grandmaster", "", "","Deep Blue","CSE-15040000","Mail: deepblue@gmail.com\nMobile: 01600000000\nFB: Deep Blue"));
-        items.add(new Item("EEE", "Watson","Cognitive Thinking,Artificial Intelligence", "", "","IBM Watson","CSE-1504999","Mail: watson@gmail.com\nMobile: 01600000000\nFB: Watson"));
-        items.add(new Item("ME", "Jarvis","Iron Man Helper, Digital Assistannt", "", "","Jarvis","CSE-1504888","Mail: jarvis@gmail.com\nMobile: 01600000000\nFB: Jarvis"));
+        items.add(new Item("EEE", "Watson","Cognitive Thinking,Artificial Intelligence", "", "","IBM Watson","EEE-1503999","Mail: watson@gmail.com\nMobile: 01600000000\nFB: Watson"));
+        items.add(new Item("ME", "Jarvis","Iron Man Helper, Digital Assistannt", "", "","Jarvis","ME-1502888","Mail: jarvis@gmail.com\nMobile: 01600000000\nFB: Jarvis"));
 
         //Add more Here
         return items;

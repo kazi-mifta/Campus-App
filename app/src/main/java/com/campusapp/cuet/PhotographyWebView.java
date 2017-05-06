@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.widget.Toast;
 
 import agency.tango.materialintro.R;
@@ -31,6 +32,7 @@ public class PhotographyWebView extends Activity implements AdvancedWebView.List
         mWebView = (AdvancedWebView) findViewById(R.id.webview);
         mWebView.setListener(this, this);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         mWebView.loadUrl("https://cuetphotography.000webhostapp.com/");
 
         // ...
@@ -82,7 +84,7 @@ public class PhotographyWebView extends Activity implements AdvancedWebView.List
             mToast.cancel();
         }
 
-        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_SHORT).show();
 
     }
 

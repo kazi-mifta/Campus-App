@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.widget.Toast;
 
 import agency.tango.materialintro.R;
@@ -26,13 +27,14 @@ public class CalendarWebView extends Activity implements AdvancedWebView.Listene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.web);
+        setContentView(R.layout.web_calendar_view);
 
         mCube=(GifImageView)findViewById(R.id.gifCube);
 
         mWebView = (AdvancedWebView) findViewById(R.id.webview);
         mWebView.setListener(this, this);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         mWebView.loadUrl("https://teamup.com/ks9mq2dgkqbkzk2gbi");//The Website Where The Calendar Resides.
 
 
@@ -90,7 +92,7 @@ public class CalendarWebView extends Activity implements AdvancedWebView.Listene
             mToast.cancel();
         }
 
-        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_LONG).show();
+        mToast.makeText(this, "Please Wait.It Will Take Some Seconds.", Toast.LENGTH_SHORT).show();
 
     }
 
