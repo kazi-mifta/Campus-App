@@ -2,11 +2,10 @@ package com.campusapp.cuet;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.widget.LinearLayout;
 
-import com.davemorrissey.labs.subscaleview.ImageSource;
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import agency.tango.materialintro.R;
 
@@ -15,17 +14,15 @@ import agency.tango.materialintro.R;
 * Show the View As We Scrool Up or Down or Sideways.
  */
 public class MapActivity extends Activity {
-    private LinearLayout container;
-    private int currentX;
-    private int currentY;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_view);
 
-        SubsamplingScaleImageView imageView = (SubsamplingScaleImageView)findViewById(R.id.imageView);
-        imageView.setImage(ImageSource.resource(R.drawable.map));
+        PhotoView photoView = (PhotoView) findViewById(R.id.imageView);
+        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(photoView);
+        Glide.with(this).load(R.drawable.map).into(imageViewTarget);
 
 
     }
