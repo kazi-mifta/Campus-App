@@ -137,6 +137,13 @@ public class  MainActivity extends AppCompatActivity {
                             }else if (drawerItem.getIdentifier() == 7) {
                                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
                                 startActivity(intent);
+                            }else if (drawerItem.getIdentifier() == 8) {
+                                Intent intent = new Intent(MainActivity.this, Contributors.class);
+                                startActivity(intent);
+                            }
+                            else if (drawerItem.getIdentifier() == 9) {
+                                Intent intent = new Intent(MainActivity.this, About.class);
+                                startActivity(intent);
                             }
                         }
                         //we do not consume the event and want the Drawer to continue with the event chain

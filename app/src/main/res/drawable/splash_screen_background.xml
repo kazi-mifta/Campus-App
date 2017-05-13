@@ -8,9 +8,9 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:width="64dp"
+            android:width="128dp"
             android:height="128dp"
-            android:src="@drawable/cuet"/>
+            android:src="@drawable/cuet_logo"/>
     </item>
 
 </layer-list>

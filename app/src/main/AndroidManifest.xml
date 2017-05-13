@@ -59,6 +59,12 @@
         <activity android:name="com.campusapp.cuet.MapActivity"
             android:theme="@style/AppTheme"/>
 
+        <activity android:name="com.campusapp.cuet.About"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.campusapp.cuet.Contributors"
+            android:theme="@style/AppTheme"/>
+
 
 
 
